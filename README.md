@@ -1,73 +1,112 @@
-# React + TypeScript + Vite
+# 🎵 Music Interval Trainer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web application for training your ear to recognize musical intervals, the DNA of music. Practice singing intervals by first hearing a note, attempting to sing the target interval, and then checking your accuracy.
 
-Currently, two official plugins are available:
+![Music Interval Trainer Screenshot](src/assets/app-screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Features
 
-## React Compiler
+- **Random Note Generation**: Practice with any chromatic note across multiple octaves (C3-B5)
+- **11 Musical Intervals**: Train with all common intervals from minor 2nd to octave
+- **Ascending & Descending**: Practice intervals in both directions
+- **Real-time Audio**: Browser-based audio synthesis using Web Audio API
+- **Clean, Responsive UI**: Works seamlessly on desktop and mobile devices
+- **No Installation Required**: Runs entirely in the browser
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React 18, TypeScript
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite
+- **Audio**: Web Audio API
+- **Deployment**: GitHub Pages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Live Demo
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**[Try it now →](https://lgivhan.github.io/music-interval-trainer/)**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 💻 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+- Node.js 18 or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/lgivhan/music-interval-trainer.git
+cd music-interval-trainer
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser to `http://localhost:5173`
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+### Deploying to GitHub Pages
+
+```bash
+npm run deploy
+```
+
+## 📖 How to Use
+
+1. **Click "Change Note"** to generate and hear a random starting note
+2. **Select an interval** from the dropdown (e.g., "Major 3rd")
+3. **Choose direction** (Ascending or Descending)
+4. **Try to sing** the target interval in your head or out loud
+5. **Click "Play Interval"** to hear the correct note
+6. **Compare** what you sang with the actual interval
+
+## 🎼 Available Intervals
+
+- Minor 2nd (1 semitone)
+- Major 2nd (2 semitones)
+- Minor 3rd (3 semitones)
+- Major 3rd (4 semitones)
+- Perfect 4th (5 semitones)
+- Tritone (6 semitones)
+- Perfect 5th (7 semitones)
+- Minor 6th (8 semitones)
+- Major 6th (9 semitones)
+- Minor 7th (10 semitones)
+- Major 7th (11 semitones)
+- Octave (12 semitones)
+
+## 🔮 Future Enhancements
+
+- **Song References**: Add references to songs for interval memorization
+- **Pitch Detection**: Use device microphone to automatically detect sung notes and provide real-time feedback
+- **Accuracy Scoring**: Visual indicators showing how close your sung note was to the target
+- **Progress Tracking**: Save your practice history and track improvement over time
+- **Quiz Mode**: Timed challenges with scoring system
+- **Custom Ranges**: Select specific octave ranges for practice
+- **Instrument Selection**: Choose between different sound waves (sine, square, triangle, piano)
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+MIT License - feel free to use this project for learning and development.
+
+## 🙏 Acknowledgments
+
+- Built using Claude.ai
+- Inspired by traditional ear training exercises used in music education
